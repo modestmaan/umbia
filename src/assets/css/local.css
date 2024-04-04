@@ -154,6 +154,9 @@
     gap: 1.5rem;
     grid-column: span 12;
   }
+
+  
+
   #services-1646 .cs-item:hover {
     border-color: var(--primary);
   }
@@ -162,6 +165,7 @@
     height: auto;
     display: block;
   }
+  
   #services-1646 .cs-h3 {
     font-size: 1.25rem;
     text-align: inherit;
@@ -171,6 +175,8 @@
     color: var(--headerColor);
     transition: color 0.3s;
   }
+
+  
   #services-1646 .cs-item-text {
     /* 14px - 16px */
     font-size: clamp(0.875rem, 1.5vw, 1rem);
@@ -195,6 +201,10 @@
   #services-1646 .cs-item {
     grid-column: span 6;
   }
+  #services-1646 .cs-item-number {
+    color: car(--primaryLight);
+  }
+  
 }
 /*-- -------------------------- -->
 <---          Services          -->
