@@ -321,7 +321,7 @@ html {
     width: 40%;
     max-width: 9.125rem;
     height: 100%;
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 0.75rem;
     /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
     display: flex;
@@ -686,7 +686,7 @@ html {
     z-index: 10000;
   }
   #cs-navigation .cs-logo {
-    width: 18.4%;
+    width: 23%;
     max-width: 20rem;
     height: 100%;
     /* 32px - 64px */
