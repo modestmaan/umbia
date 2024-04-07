@@ -1,315 +1,388 @@
 ---
-title: 'Umbia Media | Web Agency | Vancouver, BC'
-description: 'Web agency'
-preloadImg: '/assets/images/logo.png'
-permalink: '/'
+title: "Umbia Media | Web Agency | Vancouver, BC"
+description: "Web agency"
+preloadImg: "/assets/images/logo.png"
+permalink: "/"
 eleventyNavigation:
-  key: Home
+  key: HOME
   order: 100
 ---
 
-{% extends "layouts/base.html" %}
+{% extends "layouts/base.html" %} {% block head %}
+<link rel="stylesheet" href="/assets/css/local.css" />
+<link rel="stylesheet" href="/assets/css/critical.css" />
 
-{% block head %}
-    <link rel="stylesheet" href="/assets/css/local.css" />
-    <link rel="stylesheet" href="/assets/css/critical.css" />
-
-    <!-- Script for Netlify Identity -->
-    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script defer>
-        if (window.netlifyIdentity) {
-            window
-                .netlifyIdentity
-                .on('init', (user) => {
-                    if (!user) {
-                        window
-                            .netlifyIdentity
-                            .on('login', () => {
-                                document.location.href = '/admin/';
-                            });
-                    }
-                });
-        }
-    </script>
-{% endblock %}
-
-{% block body %}
+<!-- Script for Netlify Identity -->
+<script
+  defer
+  src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+></script>
+<script defer>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+{% endblock %} {% block body %}
 
 <section id="hero-358">
-    <div class="cs-container">
-        <div class="cs-flex-group">
-            <span class="cs-topper">Professional</span>
-            <h1 class="cs-title">Web Design + Development</h1>
-            <p class="cs-text">
-                No page builders or WordPress - We offer 100% hand-coded websites with superior results starting at $75/mo.
-            </p>
-            <div class="cs-button-group">
-                <a href="/contact" class="cs-button-solid">GET IN TOUCH!</a>
-                <a href="" class="cs-button-transparent">
-                    <picture class="cs-picture">
-                        <img class="cs-img" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Hero/phone-white.svg" alt="icon" width="24" height="24" aria-hidden="true">
-                    </picture>
-                    <div class="cs-content">
-                        <span class="cs-tag">Call Anytime</span>
-                        <span class="cs-number">(604) 763 2030</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="cs-image-group">
-            <img class="cs-splash" decoding="async" src="/assets/images/splash.png" alt="icon" width="792" height="616" aria-hidden="true">
-
-            <picture class="cs-person">
-                <source media="(max-width: 600px)" srcset="https://d33wubrfki0l68.cloudfront.net/81ff3b9ad31c44ae1e5d3af2f0d6364d60edee85/2f15f/images/mock-up-replace.png">
-                <source media="(min-width: 601px)" srcset="https://d33wubrfki0l68.cloudfront.net/81ff3b9ad31c44ae1e5d3af2f0d6364d60edee85/2f15f/images/mock-up-replace.png">
-                <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Hero/maid.png" alt="maid" width="831" height="674">
-            </picture>
-        </div>
+  <div class="cs-container">
+    <div class="cs-flex-group">
+      <span class="cs-topper">Professional</span>
+      <h1 class="cs-title">Web Design + Development</h1>
+      <p class="cs-text">
+        No page builders or WordPress - We offer 100% hand-coded websites with
+        superior results starting at $99/mo.
+      </p>
+      <div class="cs-button-group">
+        <a href="/contact" class="cs-button-solid">GET IN TOUCH!</a>
+        <a href="" class="cs-button-transparent">
+          <picture class="cs-picture">
+            <img
+              class="cs-img"
+              decoding="async"
+              src="https://csimg.nyc3.digitaloceanspaces.com/Hero/phone-white.svg"
+              alt="icon"
+              width="24"
+              height="24"
+              aria-hidden="true"
+            />
+          </picture>
+          <div class="cs-content">
+            <span class="cs-tag">Call Anytime</span>
+            <span class="cs-number">(604) 763 2030</span>
+          </div>
+        </a>
+      </div>
     </div>
+    <div class="cs-image-group">
+      <img
+        class="cs-splash"
+        decoding="async"
+        src="/assets/images/splash.png"
+        alt="icon"
+        width="792"
+        height="616"
+        aria-hidden="true"
+      />
+
+      <picture class="cs-person">
+        <source
+          media="(max-width: 600px)"
+          srcset="
+            https://d33wubrfki0l68.cloudfront.net/81ff3b9ad31c44ae1e5d3af2f0d6364d60edee85/2f15f/images/mock-up-replace.png
+          "
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="
+            https://d33wubrfki0l68.cloudfront.net/81ff3b9ad31c44ae1e5d3af2f0d6364d60edee85/2f15f/images/mock-up-replace.png
+          "
+        />
+        <img
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Hero/maid.png"
+          alt="maid"
+          width="831"
+          height="674"
+        />
+      </picture>
+    </div>
+  </div>
 </section>
 <div id="cs-content-831">
-    <span class="cs-topper">WHAT WE DO</span>
-    <p class="cs-text">We specialize in small business web design and development for clients anywhere in Canada. Every line of code is written by hand to ensure the best performance, which helps bring in more customers to your site and bring more revenue to your business.</p>
+  <span class="cs-topper">WHAT WE DO</span>
+  <p class="cs-text">
+    We specialize in small business web design and development for clients
+    anywhere in Canada. Every line of code is written by hand to ensure the best
+    performance, which helps bring in more customers to your site and bring more
+    revenue to your business.
+  </p>
 </div>
 
-
-
-
 <section id="services-1557">
-    <div class="cs-container">
-        <ul class="cs-card-group">
-            <li class="cs-item">
-                <picture class="cs-picture">
-                    <img class="cs-icon"
-                            src="/assets/images/mobile.png"
-                            loading="lazy" decoding="async" alt="icon" width="33" height="38" aria-hidden="true">
-                </picture>
-                <!-- Text Grouped For Flexbox-->
-                <div class="cs-text-group">
-                    <h3 class="cs-h3">Mobile-First Design</h3>
-                    <p class="cs-item-text">We start building your site for mobile devices first, then we add on to it to make tablet and desktop.</p>
-                </div>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-picture">
-                    <img class="cs-icon" src="/assets/images/responsive.png"
-                            loading="lazy" decoding="async" alt="icon" width="33" height="38" aria-hidden="true">
-                </picture>
-                <!-- Text Grouped For Flexbox-->
-                <div class="cs-text-group">
-                    <h3 class="cs-h3">Fully Responsive</h3>
-                    <p class="cs-item-text">Your website will fit all mobile screens sizes, tablets, and desktop sizes so new clients can access your site from anywhere.</p>
-                </div>
-            </li>
-            <li class="cs-item">
-                <picture class="cs-picture">
-                    <img class="cs-icon"
-                            src="/assets/images/optimization.png"
-                            loading="lazy" decoding="async" alt="icon" width="33" height="38" aria-hidden="true">
-                </picture>
-                <!-- Text Grouped For Flexbox-->
-                <div class="cs-text-group">
-                    <h3 class="cs-h3">Optimization</h3>
-                    <p class="cs-item-text">60% of all internet traffic is on mobile devices, so we optimize your mobile to perform their best in search engines.</p>
-                </div>
-            </li>
-        </ul>
-    </div>
+  <div class="cs-container">
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="/assets/images/mobile.png"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="33"
+            height="38"
+            aria-hidden="true"
+          />
+        </picture>
+        <!-- Text Grouped For Flexbox-->
+        <div class="cs-text-group">
+          <h3 class="cs-h3">Mobile-First Design</h3>
+          <p class="cs-item-text">
+            We start building your site for mobile devices first, then we add on
+            to it to make tablet and desktop.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="/assets/images/responsive.png"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="33"
+            height="38"
+            aria-hidden="true"
+          />
+        </picture>
+        <!-- Text Grouped For Flexbox-->
+        <div class="cs-text-group">
+          <h3 class="cs-h3">Fully Responsive</h3>
+          <p class="cs-item-text">
+            Your website will fit all mobile screens sizes, tablets, and desktop
+            sizes so new clients can access your site from anywhere.
+          </p>
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <img
+            class="cs-icon"
+            src="/assets/images/optimization.png"
+            loading="lazy"
+            decoding="async"
+            alt="icon"
+            width="33"
+            height="38"
+            aria-hidden="true"
+          />
+        </picture>
+        <!-- Text Grouped For Flexbox-->
+        <div class="cs-text-group">
+          <h3 class="cs-h3">Optimization</h3>
+          <p class="cs-item-text">
+            60% of all internet traffic is on mobile devices, so we optimize
+            your mobile to perform their best in search engines.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
 </section>
-
-
-
 
 <section id="services-1646">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">Our Services</span>
-            <h2 class="cs-title">$0 Down, $99 Per Month</h2>
-            {# <h2 class="cs-title">Or Starting at $500</h2> #}
-            <p class="cs-text">$0 down for a standard 5 page small business website. If you need more than that then we have to do custom pricing based on the scope of work, number of additional pages, and time involved.</p>
-            <a href="/contact" class="cs-button-solid">Get Started</a>
-        </div>
-        <ul id="list-1597" class="cs-card-group">
-    <li class="cs-item">
-        <div class="wrapper">
-            <span class="cs-item-number">-</span>
-            <h3 class="cs-h3">
-                Hosting Fees Included
-            </h3>
-        </div>
-        <p class="cs-item-text">
-            Hosting fees are built right into the monthly payment.
-        </p>
-    </li>
-    <li class="cs-item">
-        <div class="wrapper">
-            <span class="cs-item-number">-</span>
-            <h3 class="cs-h3">
-                Unlimited Edits
-            </h3>
-        </div>
-        <p class="cs-item-text">
-            Change anything you want at anytime and it will be done that day.
-        </p>
-    </li>
-    <li class="cs-item">
-        <div class="wrapper">
-            <span class="cs-item-number">-</span>
-            <h3 class="cs-h3">
-                24/7 Customer Service
-            </h3>
-        </div>
-        <p class="cs-item-text">
-            Call direct anytime day or night, no phone trees or automated responses.
-        </p>
-    </li>
-    <li class="cs-item">
-        <div class="wrapper">
-            <span class="cs-item-number">-</span>
-            <h3 class="cs-h3">
-               Web Design & Development
-            </h3>
-        </div>
-        <p class="cs-item-text">
-            Includes over 40 hours of design, development, and testing.
-        </p>
-    </li>
-</ul>
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Our Services</span>
+      <h2 class="cs-title">Starting at $99 Per Month</h2>
+      {#
+      <h2 class="cs-title">Or Starting at $500</h2>
+      #}
+      <p class="cs-text">
+        $0 down for a standard 5 page small business website. If you need more
+        than that then we have to do custom pricing based on the scope of work,
+        number of additional pages, and time involved.
+      </p>
+      <a href="/contact" class="cs-button-solid">Get Started</a>
     </div>
+    <ul id="list-1597" class="cs-card-group">
+      <li class="cs-item">
+        <div class="wrapper">
+          <span class="cs-item-number">-</span>
+          <h3 class="cs-h3">Hosting Fees Included</h3>
+        </div>
+        <p class="cs-item-text">
+          Hosting fees are built right into the monthly payment.
+        </p>
+      </li>
+      <li class="cs-item">
+        <div class="wrapper">
+          <span class="cs-item-number">-</span>
+          <h3 class="cs-h3">Unlimited Edits</h3>
+        </div>
+        <p class="cs-item-text">
+          Change anything you want at anytime and it will be done that day.
+        </p>
+      </li>
+      <li class="cs-item">
+        <div class="wrapper">
+          <span class="cs-item-number">-</span>
+          <h3 class="cs-h3">24/7 Customer Service</h3>
+        </div>
+        <p class="cs-item-text">
+          Call direct anytime day or night, no phone trees or automated
+          responses.
+        </p>
+      </li>
+      <li class="cs-item">
+        <div class="wrapper">
+          <span class="cs-item-number">-</span>
+          <h3 class="cs-h3">Web Design & Development</h3>
+        </div>
+        <p class="cs-item-text">
+          Includes over 40 hours of design, development, and testing.
+        </p>
+      </li>
+    </ul>
+  </div>
 </section>
 
-
-
-
-
 <section id="services-1169">
-    <div class="cs-container">
-      <div class="cs-content">
-        <span class="cs-topper">Our Portfolio</span>
-      </div>
-      <ul class="cs-card-group">
-        <li class="cs-item">
-          <picture class="cs-picture">
-            <!--Mobile Image-->
-            <source
-                  media="(max-width: 600px)"
-                  srcset="https://media.gcflearnfree.org/content/5588514bf07fac61f8440cf9_06_22_2015/keyboardandmouse_handsonkeyboard.png">
-            <!--Tablet and above Image-->
-            <source
-                  media="(min-width: 601px)"
-                  srcset="https://media.gcflearnfree.org/content/5588514bf07fac61f8440cf9_06_22_2015/keyboardandmouse_handsonkeyboard.png">
-            <img
-                  loading="lazy"
-                  decoding="async"
-                  src="https://media.gcflearnfree.org/content/5588514bf07fac61f8440cf9_06_22_2015/keyboardandmouse_handsonkeyboard.png"
-                  alt="computer"
-                  width="413"
-                  height="240"
-                  aria-hidden="true">
-          </picture>
-          <div class="cs-info">
-            <h3 class="cs-h3">Real Estate</h3>
-            <p class="cs-item-text">
-              nasbdkjbaljwsbdadnkl aswdj aklnsdlk asdn aklsndklnawsdkl aLJKWS
-            </p>
-            <a href="" class="cs-link">
-              Read More
-              <img
-                    class="cs-arrow"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/red-arrow-right.svg"
-                    alt="icon"
-                    width="20"
-                    height="20"
-                    aria-hidden="true">
-            </a>
-          </div>
-        </li>
-        <li class="cs-item">
-          <picture class="cs-picture">
-            <!--Mobile Image-->
-            <source
-                  media="(max-width: 600px)"
-                  srcset="https://media.gcflearnfree.org/content/5588514bf07fac61f8440cf9_06_22_2015/keyboardandmouse_handsonkeyboard.png">
-            <!--Tablet and above Image-->
-            <source
-                  media="(min-width: 601px)"
-                  srcset="https://media.gcflearnfree.org/content/5588514bf07fac61f8440cf9_06_22_2015/keyboardandmouse_handsonkeyboard.png">
-            <img
-                  loading="lazy"
-                  decoding="async"
-                  src="https://media.gcflearnfree.org/content/5588514bf07fac61f8440cf9_06_22_2015/keyboardandmouse_handsonkeyboard.png"
-                  alt="computer"
-                  width="413"
-                  height="240"
-                  aria-hidden="true">
-          </picture>
-          <div class="cs-info">
-            <h3 class="cs-h3">Immigration Service</h3>
-            <p class="cs-item-text">
-              akjwsbdkjawkdj ahdjawjkdhklad awjdajlwdjajhdjl.a
-            </p>
-            <a href="" class="cs-link">
-              Read More
-              <img
-                    class="cs-arrow"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/red-arrow-right.svg"
-                    alt="icon"
-                    width="20"
-                    height="20"
-                    aria-hidden="true">
-            </a>
-          </div>
-        </li>
-        <li class="cs-item">
-          <picture class="cs-picture">
-            <!--Mobile Image-->
-            <source
-                  media="(max-width: 600px)"
-                  srcset="https://media.gcflearnfree.org/content/5588514bf07fac61f8440cf9_06_22_2015/keyboardandmouse_handsonkeyboard.png">
-            <!--Tablet and above Image-->
-            <source
-                  media="(min-width: 601px)"
-                  srcset="https://media.gcflearnfree.org/content/5588514bf07fac61f8440cf9_06_22_2015/keyboardandmouse_handsonkeyboard.png">
-            <img
-                  loading="lazy"
-                  decoding="async"
-                  src="https://media.gcflearnfree.org/content/5588514bf07fac61f8440cf9_06_22_2015/keyboardandmouse_handsonkeyboard.png"
-                  alt="computer"
-                  width="413"
-                  height="240"
-                  aria-hidden="true">
-          </picture>
-          <div class="cs-info">
-            <h3 class="cs-h3">Home Renovations</h3>
-            <p class="cs-item-text">
-              ljaSHDKJAJHWSD haJWSHDjl asJdaLDJKLaSJKLHdjl hajlHSWDljhALJDS
-            </p>
-            <a href="" class="cs-link">
-              Read More
-              <img
-                    class="cs-arrow"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/red-arrow-right.svg"
-                    alt="icon"
-                    width="20"
-                    height="20"
-                    aria-hidden="true">
-            </a>
-          </div>
-        </li>
-      </ul>
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">Our Portfolio</span>
     </div>
-  </section>
-                                
-                     
+    <ul class="cs-card-group">
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://media.gcflearnfree.org/content/5588514bf07fac61f8440cf9_06_22_2015/keyboardandmouse_handsonkeyboard.png
+            "
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://media.gcflearnfree.org/content/5588514bf07fac61f8440cf9_06_22_2015/keyboardandmouse_handsonkeyboard.png
+            "
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://media.gcflearnfree.org/content/5588514bf07fac61f8440cf9_06_22_2015/keyboardandmouse_handsonkeyboard.png"
+            alt="computer"
+            width="413"
+            height="240"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-info">
+          <h3 class="cs-h3">Real Estate</h3>
+          <p class="cs-item-text">
+            nasbdkjbaljwsbdadnkl aswdj aklnsdlk asdn aklsndklnawsdkl aLJKWS
+          </p>
+          <a href="" class="cs-link">
+            Read More
+            <img
+              class="cs-arrow"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/red-arrow-right.svg"
+              alt="icon"
+              width="20"
+              height="20"
+              aria-hidden="true"
+            />
+          </a>
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://media.gcflearnfree.org/content/5588514bf07fac61f8440cf9_06_22_2015/keyboardandmouse_handsonkeyboard.png
+            "
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://media.gcflearnfree.org/content/5588514bf07fac61f8440cf9_06_22_2015/keyboardandmouse_handsonkeyboard.png
+            "
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://media.gcflearnfree.org/content/5588514bf07fac61f8440cf9_06_22_2015/keyboardandmouse_handsonkeyboard.png"
+            alt="computer"
+            width="413"
+            height="240"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-info">
+          <h3 class="cs-h3">Immigration Service</h3>
+          <p class="cs-item-text">
+            akjwsbdkjawkdj ahdjawjkdhklad awjdajlwdjajhdjl.a
+          </p>
+          <a href="" class="cs-link">
+            Read More
+            <img
+              class="cs-arrow"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/red-arrow-right.svg"
+              alt="icon"
+              width="20"
+              height="20"
+              aria-hidden="true"
+            />
+          </a>
+        </div>
+      </li>
+      <li class="cs-item">
+        <picture class="cs-picture">
+          <!--Mobile Image-->
+          <source
+            media="(max-width: 600px)"
+            srcset="
+              https://media.gcflearnfree.org/content/5588514bf07fac61f8440cf9_06_22_2015/keyboardandmouse_handsonkeyboard.png
+            "
+          />
+          <!--Tablet and above Image-->
+          <source
+            media="(min-width: 601px)"
+            srcset="
+              https://media.gcflearnfree.org/content/5588514bf07fac61f8440cf9_06_22_2015/keyboardandmouse_handsonkeyboard.png
+            "
+          />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="https://media.gcflearnfree.org/content/5588514bf07fac61f8440cf9_06_22_2015/keyboardandmouse_handsonkeyboard.png"
+            alt="computer"
+            width="413"
+            height="240"
+            aria-hidden="true"
+          />
+        </picture>
+        <div class="cs-info">
+          <h3 class="cs-h3">Home Renovations</h3>
+          <p class="cs-item-text">
+            ljaSHDKJAJHWSD haJWSHDjl asJdaLDJKLaSJKLHdjl hajlHSWDljhALJDS
+          </p>
+          <a href="" class="cs-link">
+            Read More
+            <img
+              class="cs-arrow"
+              loading="lazy"
+              decoding="async"
+              src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/red-arrow-right.svg"
+              alt="icon"
+              width="20"
+              height="20"
+              aria-hidden="true"
+            />
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
 
-                                                            
- 
-
-    {% include 'components/cta.html' %}
-{% endblock %}
+{% include 'components/cta.html' %} {% endblock %}

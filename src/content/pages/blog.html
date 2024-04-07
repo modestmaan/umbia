@@ -1,75 +1,73 @@
 ---
-title: 'Blog'
-description: 'Blog page for all the posts'
-preloadImg: '/assets/images/comp.jpg'
-permalink: 'blog/'
+title: "Blog"
+description: "Blog page for all the posts"
+preloadImg: "/assets/images/comp.jpg"
+permalink: "blog/"
 eleventyNavigation:
-    key: Blog
-    order: 500
+  key: BLOG
+  order: 500
 ---
 
-{% extends "layouts/base.html" %}
+{% extends "layouts/base.html" %} {% block head %}
+<link rel="stylesheet" href="/assets/css/blog.css" />
+{% endblock %} {% block body %}
 
-{% block head %}
-    <link rel="stylesheet" href="/assets/css/blog.css">
-{% endblock %}
+<section id="int-hero">
+  <h1 id="home-h">Blog</h1>
+  <picture>
+    <source media="(max-width: 600px)" srcset="/assets/images/comp.jpg" />
+    <source media="(min-width: 601px)" srcset="/assets/images/comp.jpg" />
+    <img
+      aria-hidden="true"
+      decoding="async"
+      src="/assets/images/comp.jpg"
+      alt="office background"
+      loading="eager"
+      width="2500"
+      height="1667"
+    />
+  </picture>
+</section>
 
-{% block body %}
-
-    <section id="int-hero">
-        <h1 id="home-h">Blog</h1>
-        <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/comp.jpg">
-            <source media="(min-width: 601px)" srcset="/assets/images/comp.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/comp.jpg" alt="office background" loading="eager" width="2500" height="1667">
-        </picture>
-    </section>
-
-
-    <div class="blog-container main-content-wrapper">
-        <div class="main-content">
-            {% if collections.post | length == 0 %}
-                <h1>No Recent Posts</h1>
-            {% else %}
-                {%- for post in collections.post | reverse -%}
-                    <article class="recent-articles">
-                        <picture class="blog-mainImage">
-                            <img
-                            src="{{ post.data.image }}"
-                            alt="{{ post.data.imageAlt }}"
-                            width="795"
-                            height="400"
-                            decoding="async" />
-                        </picture>
-                        <div class="article-group">
-                            <div class="blog-authorGroup">
-                                <picture class="blog-author-img">
-                                    <img
-                                    src="/assets/svgs/profile.svg"
-                                    alt="house"
-                                    width="32"
-                                    height="32"
-                                    decoding="async" />
-                                </picture>
-                                <span class="blog-author">{{ post.data.author }}</span>
-                                <span aria-hidden="true" class="blog-dot"></span>
-                                <span class="blog-date">{{ post.date | postDate }}</span>
-                            </div>
-                            <h2 class="blog-h1">
-                                {{ post.data.title }}
-                            </h2>
-                            <p class="blog-desc">
-                                {{ post.data.description }}
-                            </p>
-                            <a href="{{ post.url }}" class="blog-link">Continue Reading</a>
-                        </div>
-                    </article>
-                {%- endfor -%}
-            {% endif %}
+<div class="blog-container main-content-wrapper">
+  <div class="main-content">
+    {% if collections.post | length == 0 %}
+    <h1>No Recent Posts</h1>
+    {% else %} {%- for post in collections.post | reverse -%}
+    <article class="recent-articles">
+      <picture class="blog-mainImage">
+        <img
+          src="{{ post.data.image }}"
+          alt="{{ post.data.imageAlt }}"
+          width="795"
+          height="400"
+          decoding="async"
+        />
+      </picture>
+      <div class="article-group">
+        <div class="blog-authorGroup">
+          <picture class="blog-author-img">
+            <img
+              src="/assets/svgs/profile.svg"
+              alt="house"
+              width="32"
+              height="32"
+              decoding="async"
+            />
+          </picture>
+          <span class="blog-author">{{ post.data.author }}</span>
+          <span aria-hidden="true" class="blog-dot"></span>
+          <span class="blog-date">{{ post.date | postDate }}</span>
         </div>
+        <h2 class="blog-h1">{{ post.data.title }}</h2>
+        <p class="blog-desc">{{ post.data.description }}</p>
+        <a href="{{ post.url }}" class="blog-link">Continue Reading</a>
+      </div>
+    </article>
+    {%- endfor -%} {% endif %}
+  </div>
 
-        {% include 'components/featured-post.html' %}
-    </div>
+  {% include 'components/featured-post.html' %}
+</div>
 
-{% include 'components/cta.html' %}
-{% endblock %}
+{% include 'components/cta.html' %} {% endblock %}
