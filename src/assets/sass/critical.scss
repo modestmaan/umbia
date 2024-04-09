@@ -328,6 +328,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   #services-1557 {
+    // background-color: #f7f7f7
     /* padding: var(--sectionPadding); */
     margin-top: 3rem;
   }
@@ -395,7 +396,7 @@
     left: 0; */
   }
   #services-1557 .cs-icon {
-    width: 55%;
+    width: 38%;
     height: auto;
     display: block;
   }
@@ -470,6 +471,7 @@
     gap: 0.5rem;
   }
   #list-1597 .cs-h3 {
+    // text-align: center;
     font-size: 1.25rem;
     line-height: 1.2em;
     font-weight: 700;
@@ -481,6 +483,7 @@
     gap: 0.5rem;
   }
   #list-1597 .cs-item-text {
+    // text-align: center;
     font-size: 0.875rem;
     line-height: 1.5em;
     margin: 0;
@@ -498,4 +501,5 @@
 }
 
 
+               
 /*# sourceMappingURL=critical.css.map */
