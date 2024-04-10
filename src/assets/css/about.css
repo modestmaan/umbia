@@ -543,6 +543,218 @@
     display: block;
   }
 }
+/*-- -------------------------- -->
+<---       Content Group        -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #cs-content-1792 {
+    padding: 2rem 2rem 2rem 2rem;
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6.5vw, 4rem);
+  }
+  #cs-content-1792 .cs-content {
+    /* set text align to center if content needs to be center aligned */
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  #cs-content-1792 .cs-flex-wrapper {
+    max-width: 37.5rem;
+    /* lets the div's contents act as though it doesn't exist and can be children of the next surrounding parent div, in this case the cs-content. That way we can place the button under the cs-wrapper on mobile, but bring it back under the header on tablet */
+    display: contents;
+  }
+  #cs-content-1792 .cs-title {
+    margin: 0;
+    /* 16px - 32px */
+    margin-bottom: clamp(1rem, 3vw, 2rem);
+  }
+  #cs-content-1792 .cs-wrapper {
+    max-width: 39.5rem;
+  }
+  #cs-content-1792 .cs-text {
+    margin: 0 0 2rem 0;
+  }
+  #cs-content-1792 .cs-button-solid {
+    font-size: 1rem;
+    font-weight: 700;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-align: center;
+    text-decoration: none;
+    min-width: 9.375rem;
+    margin: 0;
+    margin-top: 2rem;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    padding: 0 1.5rem;
+    color: #fff;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #cs-content-1792 .cs-button-solid:before {
+    content: "";
+    width: 0%;
+    height: 100%;
+    background: #000;
+    opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #cs-content-1792 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #cs-content-1792 .cs-button-solid {
+    margin: 0;
+    display: inline-block;
+    order: 2;
+  }
+  #cs-content-1792 .cs-text {
+    max-width: 40rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  #cs-content-1792 .cs-ul {
+    max-width: 39.375rem;
+    margin: 0 0 2rem 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  #cs-content-1792 .cs-li {
+    font-size: var(--bodyFontSize);
+    list-style: none;
+    line-height: 1.5em;
+    width: 100%;
+    color: var(--bodyTextColor);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  #cs-content-1792 .cs-check-icon {
+    width: 1.5rem;
+    height: auto;
+    /* adds extra space between the icon and top of parent so it's more centered */
+    margin-top: 1px;
+    display: block;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #cs-content-1792 .cs-content {
+    text-align: left;
+    max-width: 80rem;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+    columns: 2;
+  }
+  #cs-content-1792 .cs-flex-wrapper {
+    width: 40vw;
+    display: block;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  #cs-content-1792 .cs-ul {
+    margin: 0;
+  }
+}
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #cs-content-1792 .cs-ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #cs-content-1792 .cs-li {
+    width: 48%;
+  }
+}
+/*-- -------------------------- -->
+<---         CS-Content         -->
+<--- -------------------------- -*/
+/* you can place this CSS group in your global stylesheet that is loaded on every page of the site so all you need to do is copy and paste the HTML into any section and it will all work. Or piece it inside the media queries in whatever section you want to add it to. You can also remove the cs-topper, cs-title, and cs-text and if they aren't already in your global stylesheet you can paste them outside these media queries so all cs-topper, cs-title, and cs-text on your site will pull from 1 place. */
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+  #cs-content-829 {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+    padding: 2rem 2rem 2rem 2rem;
+  }
+  #cs-content-829 .cs-title {
+    max-width: 20ch;
+  }
+  #cs-content-829 .cs-text {
+    max-width: 31.5rem;
+  }
+  #cs-content-829 .cs-text:before {
+    /* divider line */
+    content: "";
+    width: 7.8125rem;
+    height: 3px;
+    margin-bottom: 1rem;
+    background: var(--primary);
+    opacity: 1;
+    display: block;
+    position: relative;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #cs-content-829 {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #cs-content-829 .cs-flex {
+    width: 50%;
+    max-width: 34.375rem;
+    flex: none;
+  }
+  #cs-content-829 .cs-topper,
+  #cs-content-829 .cs-title {
+    text-align: right;
+  }
+  #cs-content-829 .cs-title {
+    margin: 0;
+  }
+  #cs-content-829 .cs-text {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #cs-content-829 .cs-text:before {
+    width: 3px;
+    height: 7.8125rem;
+    /* 24px - 28px */
+    margin: 0 clamp(1.5rem, 3vw, 1.75rem);
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+}
 
 
 
